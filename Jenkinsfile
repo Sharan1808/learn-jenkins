@@ -53,7 +53,7 @@ pipeline {
     stages {
         stage('Stage1') {
             when {
-                expression { BRANCH_NAME ==~ /(production|staging)/ }
+                branch 'production'
             }
             steps {
                 echo 'Deploying'
