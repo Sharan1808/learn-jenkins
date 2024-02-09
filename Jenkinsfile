@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Hello World'
                 script {
-                  withAWSParameterStore(credentialsId: '', naming: 'basename', path: '/', recursive: true, regionName: 'us-east-1') {
+                  withAWSParameterStore(credentialsId: '', naming: 'basename', path: '/dev', recursive: true, regionName: 'us-east-1') {
                     sh 'env'
                   }
                 }
